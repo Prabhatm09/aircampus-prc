@@ -1,5 +1,5 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -7,59 +7,142 @@
 
 /* header start */
 
-a{
+a {
     text-decoration: none;
     color: #5a5a5a;
 }
-img{
+
+img {
     cursor: pointer;
 }
-.header_nav{
+
+.header_nav {
     display: flex;
     align-items: center;
 }
-nav{
+
+nav {
     padding: 10px 12px;
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background:#fff ;
+    background: #fff;
     position: static;
     top: 0;
     z-index: 10;
 }
-.nav_right img{
+
+.nav_right img {
     width: 40px;
     margin-right: 25px;
 }
-.nav_right .user_icon{
+
+.nav_right .user_icon {
     width: 45px;
     border-radius: 50%;
     margin-right: 0;
 }
-.header_nav .menu_icon{
- width:22px;
- margin-right: 25px;
+
+.header_nav .menu_icon {
+    width: 22px;
+    margin-right: 25px;
 }
-.header_nav .logo_icon{
+
+.header_nav .logo_icon {
     width: 110px;
 }
-.header_nav .mic_icon{
+
+.header_nav .mic_icon {
     width: 20px;
 }
-.header_nav .search-box{
+
+.header_nav .search-box {
     border: 2px solid #ccc;
     margin-right: 15px;
     padding: 8px 12px;
     border-radius: 20px;
 }
-.header_nav .search-box input{
+
+.header_nav .search-box input {
     width: 400px;
     border: 0;
     outline: 0;
     background: transparent;
 }
-.header_nav .search-box img{
+
+.header_nav .search-box img {
     width: 15px;
 }
 
 /* header end */
+
+/* sidebar */
+.sidebar {
+    border: 0;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    padding-left: 2%;
+    padding-top: 40px;
+}
+
+.shortcut-links>a>img {
+    width: 25px;
+    margin-right: 20px;
+
+}
+
+.shortcut-links a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.shortcut-links a:first-child {
+    color: red;
+}
+
+.sidebar hr {
+
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+
+}
+.subscibed-list h3{
+    font-size: 18px;
+    margin: 20px 0;
+    color: #5a5a5a;
+}
+.subscibed-list a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+.subscibed-list a img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* main */
+
+.container{
+     background: #f9f9f9;
+     padding-left: 17%;
+     padding-right: 2%;
+     padding-top: 20px;
+     padding-bottom: 20px;
+
+}
+.banner{
+    width: 100%;
+
+}
+.banner img{
+    width: 100%;
+    border-radius:8px ;
+}
