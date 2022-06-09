@@ -124,21 +124,23 @@ color: rgb(250, 67, 67);
     display: flex;
     justify-content: center;
     margin-bottom: 13vh;
+    margin-left: 23px;
+    margin-right: 23px;
 }
 .box{
     position: relative;
-    width: 1256px;
-    height: 200px;
+    width: 1000px;
+    height: 320px;
     margin: 3px 5px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 1px 2px grey;
     background-color: rgb(243, 240, 240);
 }
-.boxn img{
+.box img{
     width: 100%;
     border-radius: 15px;
-    border: 1px solid red;
+    border: 1px solid white;
     z-index: -1;
 }
 .white{
@@ -153,11 +155,66 @@ color: rgb(250, 67, 67);
 }
 .white span{
     text-align: center;
-    font-size: 1em;
+    margin-left: 102px;
+    font-size: 2em;
     color: rgb(56, 56, 56);
     letter-spacing: 0.7px;
 }
-    
-    
-    
-    
+.white p{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 24px;
+    color: rgb(56, 56, 56);
+    letter-spacing: 0.7px;
+} 
+.middle{
+    margin: 60px 150px;
+}   
+.sec-2 h2{
+    font-size: 2.7rem;
+    font-weight: lighter;
+    margin-bottom: 12px;
+}
+.sec-2 div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 30px;
+}
+.sec-2 h6{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: grey;
+}
+.fa-caret-right , .sec-2 span{
+    color: rgb(248 , 117 , 117);
+}
+.sec-3{
+    display: flex;
+    justify-content: space-between;
+}
+.box-2{
+   
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 400px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgb(243, 240, 240);   
+}
+.box-2 img{
+width: 400px;
+height: 250px;
+}
+.box-2 div{
+    position: absolute;
+    background-color: line;
+    font-size: 23px;
+    font-weight: bold;
+    color: black;
+    margin: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
