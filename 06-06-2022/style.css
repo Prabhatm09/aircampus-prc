@@ -23,7 +23,6 @@ header{
     justify-content: space-between;
     font-size: 30px;
     color: white;
-    /* margin-top: 20px; */
 }
 .nav a{
     color: white;
@@ -48,7 +47,7 @@ header{
 }
 .head h1{
     margin-right: 200px;
-    font-size: 15vh;
+    font-size: 8vh;
     color: white;
     font-family: 'Satisfy', cursive;
     letter-spacing: 32px;
@@ -170,7 +169,7 @@ color: rgb(250, 67, 67);
 .middle{
     margin: 60px 150px;
 }   
-.sec-2 h2{
+.sec-2>h2{
     font-size: 2.7rem;
     font-weight: lighter;
     margin-bottom: 12px;
@@ -181,7 +180,7 @@ justify-content: space-between;
 align-items: center;
 margin-bottom: 30px;
 }
-.sec-2 h6{
+.sec-2>h6{
     margin: 0;
     font-size: 1.4rem;
     font-weight: lighter;
@@ -199,14 +198,14 @@ margin-bottom: 30px;
     margin-left: 100px;
     margin-right: 100px;
     width: 400px;
-    height: 320px;
+    height: 420px;
     overflow: hidden;
     border-radius: 15px;
     background-color: rgb(243, 240, 240);   
 }
 .box-2 img{
-width: 400px;
-height: 250px;
+width: 650px;
+height: 350px;
 }
 .box-2 div{
     position: absolute;
@@ -217,4 +216,175 @@ height: 250px;
     margin: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+.box-2 div span{
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.box-2 div i{
+    margin-left: 12px;
+    color: black;
+}
+h1{
+    font-size: 2.1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 50px;
+    color: rgb(56,6,56);
+}
+.sec-4{
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 340px 340px 340px;
+    grid-template-rows: auto;
+
+}
+.box-3{
+    border: 1px solid rgb(225,233,233);
+    box-shadow: 0 1px 3px rgb(226,223,223);
+    width: 340px;
+    height: 60px;
+    overflow: hidden;
+}
+.box-3 div{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.box-3 div span{
+    color: grey;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-3 div i{
+    color: black;
+}
+.sec-5{
+    background-color: rgb(231, 180, 180);
+    height: 500px;
+}
+.sec-5>h2{
+    font-size:60px;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 12px;
+}
+.sec-5>p{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 5px;
+}
+.input_field{
+ align-items: center;
+ margin-left: 500px;
+}
+.btn{
+    width: 100px;
+    height: 35px;
+    background: rgb(248, 95, 95);
+}
+input{
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 400px;
+    height: 35px;
+}
+label{
+    font-size: 20px;
+}
+.store{
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+}
+.store p{
+font-size: 2rem;
+text-align: center;
+padding-top: 12px;
+}
+.store img{
+    border-radius: 20px;
+    padding-top: 12px;
+    
+}
+.sec-6{
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 20px;
+}
+.box-4{
+    border: 1px solid rgb(225,233,233);
+    box-shadow: 0 1px 3px rgb(226,223,223);
+    width: 840px;
+    height: 60px;
+    overflow: hidden;
+}
+.box-4 div{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.box-4 div span{
+    color: grey;
+    font-size: 1.2rem;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box-4 div i{
+    color: black;
+}
+.foot{
+    background-color: rgb(250, 248, 248);
+    height: 200px;
+}
+.foot_nav{
+    display: flex;
+    justify-content: space-between;
+}
+.foot_nav div  img{
+ padding-top: 50px;
+ padding-left: 80px;
+}
+.foot_nav div button{
+ width: 100px;
+ height: 40px;
+ font-size: 20px;
+ border-radius: 5px;
+ margin-right: 80px;
+ margin-top: 50px;
+ background-color: white;
+}
+hr{
+    margin-top: 60px;
+    color: grey;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.social_media{
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    align-items: center;
+   
+}
+.social_media p{
+    font-size: 15px;
+    color: gray;
+    margin-top: 20px;
+ margin-left: 50px;
+}
+.social_media   a i{
+    color: black;
+    margin-top: 20px;
+    margin-right: 50px;
 }
