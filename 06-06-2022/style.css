@@ -282,6 +282,7 @@ h1{
     padding-top: 5px;
 }
 .input_field{
+    /* margin: 0 auto; */
  align-items: center;
  margin-left: 500px;
 }
