@@ -30,20 +30,20 @@
     border-radius: 20px;
     height: 60px;
  }
- .right ul li{
+ #list ul li{
     color: white;
  }
 .container{
     background-color: red;
-    height: 160px;
+    height: 260px;
     width: 700px;
     margin-top: 10%;
     margin-left: 30%;
   
 }
-h3{
-    text-align: center;
+#btn{
+   display: inline-block;
 }
-img{
-    color: white;
+#btn ul li{
+ color: wheat;
 }
