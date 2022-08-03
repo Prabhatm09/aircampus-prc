@@ -1,0 +1,69 @@
+
+.container{
+    max-width: max-content;
+    background-color: white;
+  
+    border-radius: 15px;
+    margin: 30px auto;
+}
+.input{
+width: max-content;
+height: 50%;
+/* background-color: aqua; */
+}
+input{
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    font-size: 23px;
+    margin: 13px 20px;
+    border: 10px solid #DAF96E;
+    outline: none;
+}
+button:hover{
+    background-color: green;
+    color: white;
+}
+.danger:hover{
+    background-color: rgb(255, 7, 7);
+    color: white;
+}
+#sucess{
+    width: 130px;
+    height: 35px;
+    font-size: 23px;
+    font-family: cursive;
+    margin: 13px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.danger{
+    width: 130px;
+    height: 35px;
+    font-size: 23px;
+    font-family: cursive;
+    border-radius: 8px;
+    cursor: pointer;
+}
+table{
+    font-size: 23px;
+    width: max-content;
+    border-collapse: collapse;
+    background-color:rgb(67, 253, 67);
+  
+
+}
+
+tr{
+    width: max-content;
+    margin: 23px 23px;
+    border: 2px solid white;
+
+}
+th{
+    border: 2px solid white;
+    padding:  2px 90px;
+
+}
+
