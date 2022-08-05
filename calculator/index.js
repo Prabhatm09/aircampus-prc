@@ -4,7 +4,7 @@ let button = Array.from(document.querySelectorAll('.button'));
 button.map((btn) => {
     btn.addEventListener('click', (e) => {
        let key = e.target.innerText;
-       console.log(key)
+   
         
 
        if(key == 'AC'){
@@ -35,10 +35,10 @@ button.map((btn) => {
         display.innerText = Math.sqrt(display.innerText)
        }
        else if(key == "e"){
-        display.innerText = Math.E(display.innerText)
+        display.innerText = 2.7182818285*display.innerText
        }else if(key == '±'){
-        if(display.innerText == '-'){
-            display.innerText = '+'
+        if(display.innerText = '-'){
+            display.innerText = `+${display.innerText}`
         }else if(display.innerText == '+') {
             display.innerText = '-'
         }
@@ -48,10 +48,20 @@ button.map((btn) => {
         if(display.innerText){
             display.innerText = eval(display.innerText);
         }
-       }
+       } else if(key == 'x!'){
+        display.innerText = facto
+       
        else{
         display.innerText += key;
        }
-        
+
+      
     })
+    let facto =  function fact(n){
+        if (n>1) return 1;
+         return n *fact(n-1) 
+         
+        }
+
+   }
 })
