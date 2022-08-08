@@ -7,21 +7,23 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     let task = input.value;
-
-    let task_elem = document.createElement('div');
-    task_elem.classList.add('task');
+if(task.length > 1){
+    let task_element = document.createElement('div');
+    task_element.classList.add('task');
     
-    let task_constent_elem = document.createElement('div');
-    task_constent_elem.classList.add('content');
-    task_constent_elem.append(task_input_element)
+    let task_content_element = document.createElement('div');
+    task_content_element.classList.add('content');
+    task_element.append(task_content_element)
 
-    task_elem.append(task_constent_elem);
+    task_element.append(task_content_element);
     
     let task_input_element = document.createElement('input');
     task_input_element.classList.add('text');
     task_input_element.type = 'text';
     task_input_element.value = task;
     task_input_element.setAttribute('readonly' , 'readonly');
+
+    task_content_element.append(task_input_element);
 
     let task_actions = document.createElement('div');
     task_actions.classList.add('actions');
@@ -37,20 +39,25 @@ form.addEventListener('submit', (event) => {
     task_actions.append(edit);
     task_actions.append(delete_button);
 
-    task_elem.append(task_actions);
+    task_element.append(task_actions);
 
-    tasks.append(task_elem)
- input.value = '';
+    tasks.append(task_element)
+
+     input.value = '';
 
  edit.addEventListener('click', (e)=>{
     if(edit.innerText == 'Edit'){
         edit.innerText = 'Save';
-        task_input_element.removeAttribute('readonly');
+        task_input_element.removeAttribute("readonly" );
     }else{
 
         edit.innerText = 'Edit';
+        task_input_element.setAttribute("readonly" , "readonly")
     }
- })
+ });
 
- console.log(task)
-} )
+ delete_button.addEventListener("click" , (e)=> {
+    tasks.removeChild(task_element)
+ })
+}
+});
