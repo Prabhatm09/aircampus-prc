@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: hsl(245, 255, 250);
+}
+
+/* ------------NAVBAR STARTS ------------- */
+.navbar {
+    width: 100%;
+    background-color: aquamarine;
+    height: 9vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color {
+    width: 20%;
+    height: 6vh;
+    background-color: rgb(161, 161, 161);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-btn {
+    width: 10%;
+    height: 4vh;
+    margin: 7px 8px;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(161, 161, 161);
+}
+
+.all-btn:hover {
+    border: 2px solid white;
+}
+
+.red,
+.yellow,
+.blue,
+.black {
+    width: 15%;
+    height: 4vh;
+    background-color: red;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
+.create {
+    width: 150%;
+    height: 6vh;
+    margin: 3px 6px;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    border-radius: 15px;
+    background-color: rgb(255, 206, 46);
+}
+
+.create:hover {
+    color: white;
+    cursor: pointer;
+    border: 2px dashed black;
+}
+
+/* --------------------NAVBAR END  ------------------- */
+
+
+
+/* ------------ MAIN ----------- */
+
+
+.container {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    top:25%;
+    left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.container-two{
+    width: 600px;
+    height: 430px;
+    margin: 2% 12px;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.5s;
+    display: inline-block;
+    background-color: rgb(174, 252, 255);
+   
+}
+.top{
+    width: 600px;
+    height: 10vh;
+    border-radius: 30px;
+}
+.text-1{
+    width: 350px;
+    height: 5vh;
+    text-align: center;
+    color: rgb(80, 79, 79);
+    font-size: 23px;
+    margin-bottom:45%;
+    margin-left: 20%;
+    border: none;
+    outline: none;
+    background-color:rgb(174, 252, 255);
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-option {
+    display: flex;
+    margin-left: 5%;
+}
+.left-option i{
+    margin: 8%;
+}
+.right-option{
+    margin-right: 4%;
+}
+.fa-trash-can{
+    color: black;
+}
+.fa-trash-can:hover{
+    color: red;
+}
+
+
+.bottom{
+    margin-top: 10px;
+}
+
+.left-part {
+    width: 400px;
+    height: 400px;
+    background-color:rgb(174, 252, 255);
+}
+.text{
+    width: 350px;
+    height: 5vh;
+    text-align: center;
+    color: rgb(80, 79, 79);
+    font-size: 23px;
+    margin: 20px;
+    border: none;
+    background-color: rgb(174, 252, 255);
+}
+.done-btn{
+    width: 60px;
+    height: 4vh;
+    font-size: 13px;
+    font-weight: 900;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 72%;
+    margin-left: 50%;
+}
+
+.right-part {
+    width: 200px;
+    height: 400px;
+    background-color: rgb(51, 52, 53);
+    position: fixed;
+    left: 56%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    margin-top: 5px;
+    margin-left: 18px;
+}
+
+.fa-solid {
+    font-size: large;
+    font-weight: bold;
+   cursor: pointer;
+}
+
+.colorpicker {
+    margin: 20px;
+    width: 70%;
+    height: 7vh;
+}
+.colorpicker:hover{
+    cursor: pointer;
+    border: 2px solid white
+}
