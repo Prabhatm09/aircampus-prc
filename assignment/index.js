@@ -8,7 +8,7 @@ let innercontainer = document.querySelector(".innercontainer")
 // const yellow = document.querySelector(".yellow");
 // const blue = document.querySelector(".blue");
 // const black = document.querySelector(".black");
-let colorchanger = ["red"  , "blue" , "yellow" , "black"]
+let colorchanger = ["red"  , "blue" , "yellow" , "black"];
 
 createButton.addEventListener('click', ()=>{
     container.style.display ="flex"
