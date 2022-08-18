@@ -1,19 +1,22 @@
 const createButton =  document.querySelector(".create");
+let cancelbtn = document.querySelector(".fa-xmark")
 const doneButton =  document.querySelector(".done-btn");
 let container = document.querySelector(".container");
 const input = document.querySelector(".text");
 let innercontainer = document.querySelector(".innercontainer")
-const red = document.querySelectorAll(".red");
 
 // const yellow = document.querySelector(".yellow");
 // const blue = document.querySelector(".blue");
 // const black = document.querySelector(".black");
-
-
+let colorchanger = ["red"  , "blue" , "yellow" , "black"]
 
 createButton.addEventListener('click', ()=>{
-    container.style.display ="block"
+    container.style.display ="flex"
 });
+
+cancelbtn.addEventListener("click" , (e)=>{
+   container.style.display ="none"
+})
 doneButton.addEventListener('click' , (event) => {
     event.preventDefault();
 
@@ -86,21 +89,23 @@ doneButton.addEventListener('click' , (event) => {
  
  
  input.value = ''
-
-    container.style.display ="none"
-
-
-    icon_element_lock.addEventListener('click', (e)=>{
-
+ 
+ container.style.display ="none"
+ 
+ 
+ 
+ icon_element_lock.addEventListener('click', (e)=>{
+    
     if( icon_element_lock == 'fa-solid', 'fa-lock'){
         icon_element_check.style.display = 'block'
         icon_element_delete.style.display = 'block'
         icon_element_edit.style.display = 'block'
-    }else{
-        icon_element_check.style.display = 'none'
-        icon_element_delete.style.display = 'none'
-        icon_element_edit.style.display = 'none'
     }
+    // }else{
+    //     icon_element_check.style.display = 'none'
+    //     icon_element_delete.style.display = 'none'
+    //     icon_element_edit.style.display = 'none'
+    // }
 
  });
  icon_element_check.addEventListener('click' , (e)=>{
@@ -113,11 +118,10 @@ doneButton.addEventListener('click' , (event) => {
     innercontainer.removeChild(containerTwo)
  });
 
- 
 //  red.addEventListener('click' , ()=>{
      
 //     top.style.backgroundColor = 'red'
 //     containerTwo.append(top)
 //  })
 
-});0
+});
