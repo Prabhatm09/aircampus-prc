@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movies : find your favourite</title>
+</head>
+
+<body>
+    <!-- header starts -->
+    <header class="header">
+        <div class="header-section flex">
+            <div class="logo">
+                <h4>MOVIESFare</h4>
+            </div>
+            <div class="mid-section flex">
+                <div class="Action choose option">Action</div>
+                <div class="comedy  choose option">Comedy</div>
+                <div class="thrill choose option">Thrill</div>
+                <div class="sort option">Sort</div>
+            </div>
+            <div class="right-section">
+                <button class="add" onclick="addtask()">ADD</button>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <main>
+        <div class="container-section ">
+            <form action="submit">
+                <input type="text" placeholder="Movie name" class="name input-field"> <br>
+                <input type="text" placeholder="Img Link" class="Image input-field "> <br>
+                <input type="text" class="rating input-field" placeholder="Rating"> <br>
+                <input type="text" placeholder="Category" class="Category input-field"> <br>
+                <input type="text" placeholder="Trailer link" class="trailer input-field"> <br>
+                <input type="text" placeholder="Actor Name" class="Actor input-field"> <br>
+                <input type="text" placeholder="Director Name" class="Director input-field" >
+            </form>
+            <button class="done-btn">Done</button>
+        </div>
+        <div class="diplay-section">
+         <!-- <div class="diplay">
+            <img src="photo_2022-05-31_09-53-48.jpg" alt="img">
+            <div class="detail flex">
+             <h4>movie name</h4>
+             <h5><span>8</span></h5>
+            </div>
+            <h4 class="h4">director name</h4>
+            <button class="play-btn"><a href="https://youtu.be/zlNvMMIWwzg" target="_blank">Play</a></button>
+        </div> -->
+    </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
