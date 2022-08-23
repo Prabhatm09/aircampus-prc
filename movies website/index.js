@@ -83,6 +83,8 @@ function getSorted(){
 
     return ((keyA < keyB) ? -1 : ((keyA > keyB) ? 1 : 0))
     })
+
+    console.log('sorted data' , data)
      
 
     let newData = data; 
