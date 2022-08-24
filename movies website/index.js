@@ -21,6 +21,9 @@ let thrill = document.querySelector(".thrill")
 //--------event listener-----//
 
 let data = [];
+console.log(data)
+
+
 
 function addtask(){
     container.classList.add("show-container-section")
@@ -94,7 +97,7 @@ function getSorted(){
 
         let displaytwo = document.createElement("div");
         displaytwo.setAttribute("class" , "diplaytwo")
-     displaytwo.innerHTML += ` <img src="${newData[i].imgLink}" alt="img">
+     displaytwo.innerHTML += ` <img src="${data[i].imgLink}" alt="img">
     <div class="detail flex">
      <h4>${newData[i].nameMovie}</h4>
      <h5><span>${newData[i].rating}</span></h5>
@@ -195,7 +198,5 @@ function  thrillfilter(){
         displaySection.append(sortmovie)
        
         }
-    
-   
 }
 }
