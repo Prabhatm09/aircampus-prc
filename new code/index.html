@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f0511d0431.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-part">
+        <input type="text" placeholder="enter something" class="reciepe"><i class="fa-solid fa-magnifying-glass"></i>
+        <button class="search-btn">search</button>
+        <a href=""></a>
+    </div>
+    <div class="container">
+
+    </div>
+    <script>
+        let input = document.querySelector(".reciepe");
+        let button = document.querySelector(".search-btn")
+
+        button.addEventListener("click" , function(event){
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`)
+            .then(result => result.json())
+            .then(meals => {
+                let menu = meals["meals"]
+                // console.log(menu);
+                
+                // menu.map((food)=>{
+                //     // console.log(food.strMeal)
+                //     let result = `<div class="detail">
+                // <div class="head"><h1>${food["strMeal"]}</h1>
+                //     <h1>${food["strMealThumb"]}</h1>
+                //     <h1>${food["strMeal"]}</h1>
+                //     <h1>${food["strInstructions"]}</h1>
+                //     </div>
+                // </div>`
+                // let container = document.querySelector(".container")
+                // container.innerHTML += result
+                // })
+
+                menu.forEach(food => {
+                    let result = `<div class="detail">
+                 <div class="head"><h1>${food["strMeal"]}</h1>
+                     <h1><img src="${food["strMealThumb"]}"></h1>
+                     <h2>${food["strInstructions"]}</h2>
+                     <h1><a href="${food["strYoutube"]}"></a></h1>
+                     </div>
+                 </div>`
+                let container = document.querySelector(".container")
+                container.innerHTML += result
+                });
+                
+
+            })
+        })
+    </script>
+</body>
+</html>

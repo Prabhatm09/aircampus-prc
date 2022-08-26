@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* =============css reset=========== */
+
+
+body{
+    background-image: url("gif.gif"); 
+    background-Repeat:no-repeat;
+    background-size: 100%;
+ 
+}
+.input-section{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 10% 25%;
+    
+}
+input{
+    width: 35vw;
+    /* height: 5vh; */
+    text-align: center;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    text-transform: capitalize;
+    background-color: transparent;
+}
+.input-field{
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 5vh;
+    border-radius: 5px;
+    margin: 2%;
+    border: 2px solid white;
+    background-color: white;
+}
+.input-field>i{
+    font-size: 33px;
+    color: rgb(209, 206, 206);
+}
+.submitButton{
+    width: 5vw;
+    height: 6vh;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 1% 0%;
+    background-color: transparent;
+color: white;
+border: 2px solid goldenrod;
+cursor: pointer;
+}
+.submitButton:hover{
+  border: 3px solid white;
+  color: aqua;
+  padding: 1% 0%;
+  font-size: 20px;
+transition: all 0.3s linear;
+}
+a{
+    text-decoration: none;
+    padding: 2%;
+    
+}
+a  i{
+    font-size: 33px;
+    color:red;
+
+}
+div{
+    padding:1rem;
+}
+.detail{
+    border: 5px solid white;
+}
+.head{
+    font-size: 23px;
+    color: black;
+    letter-spacing: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    width: 10vw;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex h1{
+    font-size: 23px;
+}
+h1{
+    margin: 1rem;
+    color: white;
+}

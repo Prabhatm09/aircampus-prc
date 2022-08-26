@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.input-part{
+    width: 20vw;
+    height: 5vh;
+    border: 2px solid black;
+   margin: 10% auto;
+   display: flex;
+   justify-content: space-between;
+}
+.input-part input{
+    width: 15vw;
+    border: none;
+    text-align: center;
+}
+.input-part i{
+    font-size: 1.85rem;
+ color: rgb(204, 202, 202);
+
+}
+h1{
+    font-size: 25px;
+}
+img{
+    width:20%;
+    height: 20%;
+}
+
