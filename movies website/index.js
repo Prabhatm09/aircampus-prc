@@ -14,9 +14,10 @@ let actorName = document.querySelector(".Actor");
 let directorName = document.querySelector(".Director");
 let playBtn = document.querySelector(".play-btn");
 let sortByRating = document.querySelector(".sort ");
-let choose = document.querySelector(".Action");
-let Comedy = document.querySelector(".comedy");
-let thrill = document.querySelector(".thrill")
+let midSection = document.querySelector(".mid-section")
+// let choose = document.querySelector(".Action");
+// let Comedy = document.querySelector(".comedy");
+// let thrill = document.querySelector(".thrill")
 
 //--------event listener-----//
 
@@ -114,89 +115,110 @@ function getSorted(){
 
 // ------filter by category ---------//
 
-choose.addEventListener('click' , filtermovie)
-Comedy.addEventListener('click' , comedyfilter)
-thrill.addEventListener('click' , thrillfilter);
 
 
-function filtermovie(){
-    let sortData = data;
-    data = []
-    displaySection.innerHTML = null
-    for(let i=0; i<sortData.length ; i++){
+ let filterbtn = midSection.querySelectorAll(".choose");
+ console.log(filterbtn);
 
-        if(sortData[i].category == "Action"){
+ filterbtn.forEach(function (btn){
+    btn.addEventListener("click" , function(e){
+        const category = e.currentTarget.dataset.rating;
+        const movieCategory = data.filter(function (movieItems){
+            if (movieItems.category === category) {
+                return movieItems;
+              }
+        });
+        if (category === "all") {
+            getTask(data);
+          } else {
+            getTask(movieCategory);
+          }
+    })
+ })
 
-            console.log(sortData[i].category)
+// choose.addEventListener('click' , filtermovie)
+// Comedy.addEventListener('click' , comedyfilter)
+// thrill.addEventListener('click' , thrillfilter);
 
-            let sortmovie = document.createElement("div");
-            sortmovie.setAttribute("class" , "diplaytwo")
-         sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
-        <div class="detail flex">
-         <h4>${sortData[i].nameMovie}</h4>
-         <h5><span>${sortData[i].rating}</span></h5>
-        </div>
-        <h4 class="h4">${sortData[i].directorName}</h4>
-        <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
+
+// function filtermovie(){
+//     let sortData = data;
+//     data = []
+//     displaySection.innerHTML = null
+//     for(let i=0; i<sortData.length ; i++){
+
+//         if(sortData[i].category == "Action"){
+
+//             console.log(sortData[i].category)
+
+//             let sortmovie = document.createElement("div");
+//             sortmovie.setAttribute("class" , "diplaytwo")
+//          sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
+//         <div class="detail flex">
+//          <h4>${sortData[i].nameMovie}</h4>
+//          <h5><span>${sortData[i].rating}</span></h5>
+//         </div>
+//         <h4 class="h4">${sortData[i].directorName}</h4>
+//         <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
         
-        displaySection.append(sortmovie)
+//         displaySection.append(sortmovie)
        
-        }
+//         }
     
   
-}
-}
+// }
+// }
 
-function  comedyfilter(){
-    let sortData = data;
-    data = []
-    displaySection.innerHTML = null
-    for(let i=0; i<sortData.length ; i++){
+// function  comedyfilter(){
+//     let sortData = data;
+//     data = []
+//     displaySection.innerHTML = null
+//     for(let i=0; i<sortData.length ; i++){
 
-        if(sortData[i].category == "Comedy"){
+//         if(sortData[i].category == "Comedy"){
 
-            console.log(sortData[i].category)
+//             console.log(sortData[i].category)
 
-            let sortmovie = document.createElement("div");
-            sortmovie.setAttribute("class" , "diplaytwo")
-         sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
-        <div class="detail flex">
-         <h4>${sortData[i].nameMovie}</h4>
-         <h5><span>${sortData[i].rating}</span></h5>
-        </div>
-        <h4 class="h4">${sortData[i].directorName}</h4>
-        <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
+//             let sortmovie = document.createElement("div");
+//             sortmovie.setAttribute("class" , "diplaytwo")
+//          sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
+//         <div class="detail flex">
+//          <h4>${sortData[i].nameMovie}</h4>
+//          <h5><span>${sortData[i].rating}</span></h5>
+//         </div>
+//         <h4 class="h4">${sortData[i].directorName}</h4>
+//         <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
         
-        displaySection.append(sortmovie)
+//         displaySection.append(sortmovie)
        
-        }
+//         }
     
    
-}
-}
+// }
+// }
 
-function  thrillfilter(){
-    let sortData = data;
-    data = []
-    displaySection.innerHTML = null
-    for(let i=0; i<sortData.length ; i++){
+// function  thrillfilter(){
+//     let sortData = data;
+//     data = []
+//     displaySection.innerHTML = null
+//     for(let i=0; i<sortData.length ; i++){
 
-        if(sortData[i].category == "Comedy"){
+//         if(sortData[i].category == "Comedy"){
 
-            console.log(sortData[i].category)
+//             console.log(sortData[i].category)
 
-            let sortmovie = document.createElement("div");
-            sortmovie.setAttribute("class" , "diplaytwo")
-         sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
-        <div class="detail flex">
-         <h4>${sortData[i].nameMovie}</h4>
-         <h5><span>${sortData[i].rating}</span></h5>
-        </div>
-        <h4 class="h4">${sortData[i].directorName}</h4>
-        <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
+//             let sortmovie = document.createElement("div");
+//             sortmovie.setAttribute("class" , "diplaytwo")
+//          sortmovie.innerHTML += ` <img src="${sortData[i].imgLink}" alt="img">
+//         <div class="detail flex">
+//          <h4>${sortData[i].nameMovie}</h4>
+//          <h5><span>${sortData[i].rating}</span></h5>
+//         </div>
+//         <h4 class="h4">${sortData[i].directorName}</h4>
+//         <button class="play-btn"><a href="${sortData[i].playButton}" target="_blank">Play</a></button>`
         
-        displaySection.append(sortmovie)
+//         displaySection.append(sortmovie)
        
-        }
-}
-}
+//         }
+// }
+// }

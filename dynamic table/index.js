@@ -17,7 +17,10 @@ button.addEventListener('click' , ()=> {
     <th>${number}</th>
     <th><button class="danger">Remove</button></th>
     </tr>`
-    
+     
+     name = '';
+     gmail = '';
+     number = " ";
     
     
   })
