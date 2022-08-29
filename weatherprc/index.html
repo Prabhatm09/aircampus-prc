@@ -1,56 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f0511d0431.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>WEATHER APP</title>
+    <title>Weather app</title>
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="input-section">
-            <div class="input-field">
-                <input type="text" placeholder="Enter your city name" class="cityName">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <button type="submit" class="submitButton">Submit</button>
-            <a href="https://www.google.com/maps/@27.141237,80.8833819,7z" target="_blank"><i
-                    class="fa-solid fa-location-dot"></i></a>
+    <div class="main-app">
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box"  spellcheck="false" placeholder="Enter your city.."  autocapitalize="sentences">
         </div>
-        <div class="container">
-
+        <div class="weather-info">
+            <div class="location-detail">
+                <div class="city" id="city">Lucknow , IN</div>
+                <div class="date" id="date">12 Aug(wednesday) , 2022</div>
+            </div>
+            <div class="weather-status">
+                <div class="temp" id="temp">34&deg;C</div>
+                <div class="min-max" id="min-max">34&deg;C(min)/65&deg;C(max)</div>
+                <div class="weather" id="weather">Clear</div>
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+            </div>
         </div>
     </div>
-
+    <script src="index.js"></script>
 </body>
-<script>
-    //query selectors
-    var cityInput = document.querySelector('.cityName');
-    var btn1 = document.querySelector('.submitButton');
-    //event Listeners
-    btn1.addEventListener('click', function (name) {
-
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=5142a079c21f6cb2df156c3a42bfec63`)//fetching api data
-            .then(response => response.json())//text --> json
-            .then(data => {
-                let result = `<div class="detail">
-                <div class="head"><h1>${data.name}</h1></div>
-            <div class="flex">
-                <h1>temp  ${Math.floor(data["main"].temp - 273)} °C</h1>
-                <h1> pressure ${data["main"].pressure} </h1>
-                <h1> humidity  ${data["main"].humidity} </h1>
-                </div>
-                </div>`
-                let container = document.querySelector(".container")
-                container.innerHTML = result
-                console.log(data)
-            }).catch(err => alert("invalid city name"))
-
-    })
-</script>
-
 </html>

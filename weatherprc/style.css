@@ -1,146 +1,70 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Blaka&family=Blaka+Hollow&family=IBM+Plex+Sans:wght@700&family=Poppins:wght@200&family=Quicksand:wght@300&family=Satisfy&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* =============css reset=========== */
-
-
 body{
-    background-image: url("gif.gif"); 
-    background-Repeat:no-repeat;
-    background-size: 100%;
- 
+    background-image: url(./1.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: 'Aboreto', cursive;
 }
-.input-section{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    margin: 10% 25%;
-    
-}
-input{
-    width: 35vw;
-    /* height: 5vh; */
+.main-app{
+    width: 50vh;
+    margin: 100px auto;
+    background-color: rgb(240, 248, 255 , 0.5);
+    padding: 20px;
     text-align: center;
-    letter-spacing: 0.3rem;
-    font-weight: bold;
-    font-size: 1rem;
+    box-shadow: 0px 5px 15px rgb(230 , 234 , 279);
+}
+.main-app>*{
+    margin-bottom: 20px;
+}
+.input-box{
+    width: 100%;
+    background-color: rgb(255 , 255 ,255 , 0.6);
     border: none;
-    text-transform: capitalize;
-    background-color: transparent;
-}
-.input-field{
-    display: flex;
-    flex-direction: row;
-    width: 35vw;
-    height: 5vh;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 50px;
     border-radius: 5px;
-    margin: 2%;
-    border: 2px solid white;
-    background-color: white;
+    border-bottom: 5px solid rgb(248, 105, 105);
 }
-.input-field>i{
-    font-size: 33px;
-    color: rgb(209, 206, 206);
-}
-.submitButton{
-    width: 5vw;
-    height: 6vh;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 1% 0%;
-    background-color: transparent;
-color: white;
-border: 2px solid goldenrod;
-cursor: pointer;
-}
-.submitButton:hover{
-  border: 3px solid white;
-  color: aqua;
-  padding: 1% 0%;
-  font-size: 20px;
-transition: all 0.3s linear;
-}
-a{
-    text-decoration: none;
-    padding: 2%;
-    
-}
-a  i{
-    font-size: 33px;
-    color:red;
+.input-box:focus{
+    background-color: rgb(255 , 255 ,225);
 
 }
-div{
-    padding:1rem;
+.weather-info{
+color: #582233;
+padding: 20px;
+line-height: 2rem;
+height: 50vh;
+display: none;
+background-color: rgb(255 , 255 ,255 , 0.6);
 }
-.detail{
-    border: 5px solid white;
-}
-.head{
-    font-size: 23px;
-    color: black;
-    letter-spacing: 0.85rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: black;
-    border-radius: 10px;
-    width: 10vw;
-    margin: 0 auto;
-}
-.flex{
+.weather-info.active{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
 }
-.flex h1{
-    font-size: 23px;
+.location-detail{
+    font-weight: bold;
 }
-h1{
-    margin: 1rem;
-    color: white;
+.weather-status{
+    padding: 20px;
+}
+.temp{
+    font-size: 50px;
+    font-weight: 800;
+    margin: 20px 0;
+ text-shadow: 2px  4px rgb(0,0,0 ,0.3);
+}
+.min-max , .weather{
+font-size: 12px;
+font-weight: 500;
 }
