@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Show Details</title>
+</head>
+<body>
+    <div class="ShowHeading"><h1><a href="./index.html"> TV SHOW SEARCH</a></h1></div>
+    <div class="container1"></div>
+    <div class="container2"></div>
+<div class="container3">
+</div>
+    <script>
+        let tranferData = JSON.parse(sessionStorage.getItem('key'))
+ const container1 = document.querySelector(".container1");
+
+ fetch(`https://api.tvmaze.com/shows/${tranferData.show.id}`)
+ .then((res) => res.json())
+ .then((data)=>{
+
+    let content = `
+     <img src="${data.image.medium}" alt="img">
+        <div class="moviedetails">
+            <h3>${data.name}</h3>
+            <h5>Genres: ${data.genres[0]}</h5>
+    <h5>Language: ${data.language}</h5> 
+    <h5>Staus: ${data.status}</h5>
+        </div> `
+    
+    container1.innerHTML +=content;
+ });
+
+ const containerSummary = document.querySelector(".container2");
+  fetch(`https://api.tvmaze.com/shows/${tranferData.show.id}/seasons`)
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        if(data[i].summary==null){
+            data[i].summary="No summary"
+        }
+        content = `<div class="summary">
+        <h3>season : ${data[i].number}</h3>
+        <h5>Summary</h5>
+        <p>  ${data[i].summary}</p>
+</div>`;
+     containerSummary.innerHTML += content;
+       
+      }
+    });
+    const container3 = document.querySelector(".container3");
+    fetch(` https://api.tvmaze.com/shows/${tranferData.show.id}/cast`)
+    .then((response) => response.json())
+    .then((data) => {
+    //   console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        html = `<div class="casts">
+    <img src="${data[i].person.image.medium}" alt="">
+    <h3>Name:${data[i].person.name}</h3>
+    <h3>Character Name:${data[i].character.name}</h3>
+
+     </div>`;
+        container3.innerHTML += html;
+       
+      }
+    });
+    </script>
+</body>
+</html>
+        

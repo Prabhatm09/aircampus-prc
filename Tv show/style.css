@@ -60,7 +60,7 @@ body {
 
 .input:focus {
     color: white;
-    background-color: rgb(213, 247, 245);
+    background-color: rgb(122, 122, 122);
     transition: all 0.3s linear;
 
 }
@@ -72,7 +72,7 @@ body {
 
 }
 
-.btn {
+.search {
     font-size: 22px;
     padding: 3px;
     border-radius: 10px;
@@ -145,4 +145,83 @@ body {
 a{
     text-decoration: none;
     color: black;
+}
+
+
+/* show detail page css */
+
+.ShowHeading{
+    margin: 1% 30%;
+    letter-spacing: 0.87rem;
+}
+
+.ShowHeading a{
+    font-size: 33px ;
+    color: goldenrod;   
+}
+
+/* container 1 css */
+
+.container1{
+    display: flex;
+}
+.container1 img{
+    width: fit-content;
+    height: 60vh;
+    margin: 0 2%;
+    border: 2px solid white;
+}
+
+.moviedetails{
+    margin: 2% 3%;
+} 
+
+.moviedetails>*{
+    color: white;
+}
+.summary{
+    color: whitesmoke;
+}
+h3{
+    font-size: 33px;
+    margin: 1%;
+}
+h5{
+    font-size: 20px;
+    margin-top: 5%;
+}
+.summary h3{
+    margin: 2% 3%;
+}
+.summary h5{
+    text-align: center;
+    font-size: 33px;
+}
+.summary p{
+    font-size: 1.76rem;
+    margin: 1% 1%;
+}
+.container3{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 24px;
+    box-shadow: rgba(66, 255, 224, 0.25) 0px 50px 100px -20px, 
+    rgba(49, 231, 222, 0.3) 0px 30px 60px -30px, 
+    rgba(50, 231, 231, 0.35) 0px -2px 6px 0px inset;
+    /* margin: 0 4%; */
+}
+.casts{
+    width: 300px;
+    margin: 1% 2%;
+  
+}
+ .casts img{
+    margin: 2% 15%;
+}
+
+.casts h3{
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
 }
